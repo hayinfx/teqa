@@ -3,7 +3,7 @@
 alpine-virt-3.19.1-x86_64.iso
 
 # Ignore specific backup file
-alpine.img.bkp.mobagenie
+alpine.img.bkp
 
 alpine.img
 
