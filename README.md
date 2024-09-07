@@ -17,6 +17,8 @@ TeQA mean Termux, Qemu and Alpine. TeQA builder/pre installed Alpine Image disk 
 
 4. follow instruction during installtion process.
 
+feel free to submit any question, problem, or sugestion here https://github.com/hayinfx/teqa/discussions
+
 default login :
 username : hayinfx (root)
 password : 12345
