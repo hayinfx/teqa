@@ -18,6 +18,8 @@ auto install during installation.
 
 auto install during installation.
 
+5. 500MB free disk space.
+
 # Installation :
 
 1. run Termux
