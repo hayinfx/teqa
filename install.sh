@@ -3,7 +3,9 @@
 printf "\n\n"
 echo "Welcome to TeQA v0.1.0 Installer!"
 printf "\n\n"
+echo "feel free to submit any question, problem, or sugestion here <https://github.com/hayinfx/teqa/discussions>"
 
+printf "\n\n"
 echo -n "Processing   "
 spinner='|/-\'  # Define the spinner characters as a simple string
 i=0
@@ -26,6 +28,7 @@ echo "Installing p7zip..."
 printf "\n\n"
 pkg install p7zip -y
 if [ $? -eq 0 ]; then
+printf "\n\n"
     echo "p7zip installation successful!"
     printf "\n\n"
 else
@@ -83,7 +86,15 @@ RESET='\033[0m'          # Reset to default color
 echo -! "${ORANGE}IMPORTANT: delete \"install.sh\" to prevent accidentally running install.sh. Executing install.sh after finishing installation will replace your existing alpine.img and your entire data inside alpine.img raw disk image!${RESET}"
 
 printf "\n\n"
+
+echo "Alpine default login :"
+printf "\n"
+echo "username : hayinfx (root)" 
+printf "\n"
+echo "password : 12345"
+
 printf "\n\n"
+
 echo "type \"sh run_qemu.sh\" or \"./sh run_qemu.sh\" command inside "teqa" folder to launch TeQA Alpine."
 printf "\n\n"
     exit
