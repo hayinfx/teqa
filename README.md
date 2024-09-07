@@ -6,10 +6,13 @@ TeQA mean Termux, Qemu and Alpine. TeQA builder/pre installed Alpine Image disk 
 
 1. Device Android OS with arm64 architecture
 2. Termux 
+
 you need to install it manually from Fdroid https://f-droid.org/id/packages/com.termux/ . install Version 0.118.1 stable version. dont install Termux from Playstore because Termux Playstore are deprecated and no longer suported for newer device and Android OS.
 3. Qemu Emulator cli (core and utilities)
+
 auto install during installation.
 4. p7zip cli
+
 auto install during installation.
 
 # Installation :
