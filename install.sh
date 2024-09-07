@@ -22,13 +22,35 @@ printf "\b "  # Clear the spinner character
 # Proceed with the rest of the script
 printf "\n\n"
 
-# Install p7zip and check if the installation was successful
+# Update Termux packages
+printf "\n\n"
+echo "Updating Termux Repo..."
+printf "\n\n"
+pkg update
+#pkg upgrade
+#exit
+# Install QEMU
+printf "\n\n"
+echo "Installing QEMU core and Qemu utility..."
+printf "\n\n"
+pkg install qemu-utils qemu-common qemu-system-x86_64-headless -y
+if [ $? -eq 0 ]; then
+    printf "\n\n"
+    echo "QEMU installation successful!"
+    printf "\n\n"
+else
+    echo "QEMU installation failed!"
+    printf "\n\n"
+    exit 1
+fi
+#exit
+# Install p7zip
 printf "\n\n"
 echo "Installing p7zip..."
 printf "\n\n"
 pkg install p7zip -y
 if [ $? -eq 0 ]; then
-printf "\n\n"
+    printf "\n\n"
     echo "p7zip installation successful!"
     printf "\n\n"
 else
@@ -36,7 +58,8 @@ else
     printf "\n\n"
     exit 1
 fi
-printf "\n\n"
+
+#exit
 
 # Navigate to the directory containing files
 cd ~/teqa
