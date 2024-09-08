@@ -23,24 +23,25 @@ auto install during installation.
 # Installation :
 
 1. run Termux
-2. install git client for Termux (optional)
+2. install git client for Termux (optional but recommended)
 
-pkg update
-pkg install git
+pkg update && pkg install git -y
 
-if you cant install git client or error while copy this repo with git command, download repo manually with wget and skip step 3 :
+3. inside your termux Home directory. you can type "cd" to jump to Termux home. type "pwd" to check if its already in home dir (/data/data/com.termux/files/home). clone this project repo.
 
-pkg update && pkg install -y unzip && pkg install -y wget unzip && wget -O - https://github.com/hayinfx/teqa/archive/refs/heads/main.zip | unzip -
-
-last but not least, you can download archive manualy via this link https://github.com/hayinfx/teqa/archive/refs/heads/main.zip , move zip file to root internal sdcard with file manager , and run Termux command bellow :
-
-pkg install -y unzip && unzip /storage/emulated/0/main.zip -d ~/ 
-
-3. clone this repo (skip this step and jump to step 4 if you download repo via wget or zip archive)
+via Termux git client (recommended) : 
 
 git clone https://github.com/hayinfx/teqa.git
 
-inside your termux Home directory. you can type "cd" to jump to Termux home. type "pwd" to check if its already in home dir (/data/data/com.termux/files/home).
+if you cant install git client or error while copy this repo with git command, download repo manually with wget.
+
+via Termux wget and unzip : 
+
+pkg update && pkg install -y unzip && pkg install -y wget unzip && wget -O - https://github.com/hayinfx/teqa/archive/refs/heads/main.zip | unzip -
+
+last but not least, you can download archive manualy via https://github.com/hayinfx/teqa/archive/refs/heads/main.zip , move zip file to root internal sdcard with file manager , and run Termux command bellow :
+
+pkg install -y unzip && unzip /storage/emulated/0/main.zip -d ~/ 
 
 4. cd into teqa folder with "cd teqa" or "cd ~/teqa" 
 
