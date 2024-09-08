@@ -23,10 +23,29 @@ auto install during installation.
 # Installation :
 
 1. run Termux
-2. clone this repo with "git clone https://github.com/hayinfx/teqa.git" inside your termux Home directory. you can type "cd" to jump to Termux home. type "pwd" to check if its already in home dir (/data/data/com.termux/files/home).
-2. cd into teqa folder with "cd teqa" or "cd ~/teqa" 
-3. inside teqa folder run command "sh install.sh" or "sh ./install.sh".
+2. install git client for Termux (optional)
 
-4. follow instruction during installtion process.
+pkg update
+pkg install git
+
+if you cant install git client or error while copy this repo with git command, download repo manually with wget and skip step 3 :
+
+pkg update && pkg install -y unzip && pkg install -y wget unzip && wget -O - https://github.com/hayinfx/teqa/archive/refs/heads/main.zip | unzip -
+
+last but not least, you can download archive manualy via this link https://github.com/hayinfx/teqa/archive/refs/heads/main.zip , move zip file to root internal sdcard with file manager , and run Termux command bellow :
+
+pkg install -y unzip && unzip /storage/emulated/0/main.zip -d ~/ 
+
+3. clone this repo (skip this step and jump to step 4 if you download repo via wget or zip archive)
+
+git clone https://github.com/hayinfx/teqa.git
+
+inside your termux Home directory. you can type "cd" to jump to Termux home. type "pwd" to check if its already in home dir (/data/data/com.termux/files/home).
+
+4. cd into teqa folder with "cd teqa" or "cd ~/teqa" 
+
+5. inside teqa folder run command "sh install.sh" or "sh ./install.sh".
+
+6. follow instruction during installtion process.
 
 feel free to submit any question, problem, or sugestion here https://github.com/hayinfx/teqa/discussions
